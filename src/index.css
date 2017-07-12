@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.dropdown .dropdown-menu {
+    /* To be compatible, we already have included IE9 in the index.html page, so...*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    display: block;
+    max-height: 0;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+    overflow-y: 'scroll';
+    max-height: 300px;
+    width: 300px;
+    opacity: 1;
+}
