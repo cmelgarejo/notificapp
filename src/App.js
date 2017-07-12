@@ -15,7 +15,7 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <ButtonToolbar style={{ marginTop: 10}}>
+              <ButtonToolbar style={{ margin: 10 }}>
                 <ButtonGroup>
                   <Button>
                     <Glyphicon glyph="envelope" />

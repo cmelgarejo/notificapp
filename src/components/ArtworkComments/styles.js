@@ -8,6 +8,7 @@ const Colors = {
 
 const Styles = {
     NotificationWindow: {
+        backgroundColor: '#FEFEFE',
         width: 300,
         maxHeight: 280, 
         padding: 10, 

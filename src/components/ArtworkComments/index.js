@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Badge, Button, DropdownButton, Col, Glyphicon, Grid, Image, Media, Row } from 'react-bootstrap'
+import { Badge, DropdownButton,MenuItem, Glyphicon, Image, Media } from 'react-bootstrap'
 import axios from 'axios'
 import moment from 'moment'
 import Styles from './styles'
@@ -24,7 +24,7 @@ export default class ArtworkComments extends Component {
     handleMark = (id) => {
         let { notifications } = this.state
         this.setState({notifications: notifications.map(info => {
-                info.acknowledged = info.id == id ? true : info.acknowledged
+                info.acknowledged = info.id === id ? true : info.acknowledged
                 return info
             })
         })
@@ -35,7 +35,7 @@ export default class ArtworkComments extends Component {
             unreadCount = notifications.filter(info => !info.acknowledged).length,
             bellStyle = unreadCount > 0 ? 'primary' : 'default'
         return (
-            <DropdownButton animation noCaret bsStyle={bellStyle} title={
+            <DropdownButton pullRight id="notifications_dropdown" noCaret bsStyle={bellStyle} title={
                     <span>
                         <Glyphicon glyph="bell"/>
                         {unreadCount > 0 &&  <Badge>{unreadCount}</Badge>}

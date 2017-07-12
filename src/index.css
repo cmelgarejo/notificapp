@@ -18,7 +18,6 @@ body {
 }
 
 .dropdown.open .dropdown-menu {
-    overflow-y: 'scroll';
     max-height: 300px;
     width: 300px;
     opacity: 1;
